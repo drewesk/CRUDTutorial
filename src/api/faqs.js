@@ -1,12 +1,23 @@
 const express = require('express');
+const monk = require('monk');
+
+const db = monk(process.env.MONGO_URI || "mongodb://localhost/faqs");
+const faqs = db.get('faqs');
 
 const router = express.Router();
 
 //Read All
-router.get('/', (req, res, next) => {
-    res.json({
-        message:'Hello Read All'
-    });
+router.get('/', async (req, res, next) => {
+    try {
+        db.then(() => console.log("Connected to MongoDB")).catch((err) =>
+          console.error("Connection error:", err)
+        );
+        // const items = await faqs.find({});
+        // res.json(items)
+        // console.log(db.get('faqs').find({}))
+    } catch (error) {
+        next(error);
+    }
 });
 
 //Read One

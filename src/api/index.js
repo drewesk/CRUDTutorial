@@ -1,7 +1,7 @@
 const express = require('express');
 
 const emojis = require('./emojis');
-const faqs = require('./faqs');
+const faqs = require('./faqs.js');
 
 const router = express.Router();
 
