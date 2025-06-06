@@ -36,3 +36,5 @@ router.delete('/:id',(req, res, next) => {
         message: 'Hello Delete One'
     });
 });
+
+module.exports = router;

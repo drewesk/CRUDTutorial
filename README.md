@@ -1,5 +1,7 @@
 # Express API Starter
 
+Credit to CJ Reynolds, link here:
+[YouTube Tutorial](https://youtu.be/EzNcBhSv1Wo?si=LziVCpWn04O5hvf1)
 How to use this template:
 
 ```sh
